@@ -30,9 +30,9 @@ class Requestor:
         r = requests.get("{}/{}".format(self._base_url, endpoint), headers=self._headers)
         end = timer()
         if self.cache:
-            print("Enpoint: {0} | Time: {1} | Cache: {2}".format(endpoint, end - start, r.from_cache, ))
+            print("Endpoint: {0} | Time: {1} | Cache: {2}".format(endpoint, end - start, r.from_cache, ))
         else:
-            print("Enpoint: {0} | Time: {1} ".format(endpoint, end - start ))
+            print("Endpoint: {0} | Time: {1} ".format(endpoint, end - start ))
         return r.json()
 
     @staticmethod
